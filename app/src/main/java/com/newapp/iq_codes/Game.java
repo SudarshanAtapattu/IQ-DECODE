@@ -12,10 +12,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
-import java.util.Random;
 
 /***
  * Game
@@ -144,7 +142,7 @@ public class Game extends AppCompatActivity {
         option4.setText(questionLists.get(0).getOption4());
 
 
-        Collections.shuffle(questionLists, new Random(System.nanoTime())); // random 
+        //Collections.shuffle(questionLists, new Random(System.nanoTime())); // random
 
 
 
