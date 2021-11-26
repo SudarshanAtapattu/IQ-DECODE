@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
             /***
-             * if user there is already user inside the firebase user
+             * if user there is already user inside the firebase user....
              */
             Intent intent = new Intent(getApplicationContext(), Levels.class);
             startActivity(intent);
