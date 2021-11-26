@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.34307692307692306" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3441025641025641" />
+        <entry key="app/src/main/res/drawable/buttonnew.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/game_oval_1001.xml" value="0.3441025641025641" />
+        <entry key="app/src/main/res/drawable/round_ack_white_1000.xml" value="0.2101851851851852" />
+        <entry key="app/src/main/res/drawable/round_back_white_10.xml" value="0.14074074074074075" />
+        <entry key="app/src/main/res/drawable/round_back_white_stroke11.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/round_bback_white.xml" value="0.2101851851851852" />
+        <entry key="app/src/main/res/drawable/score_items.xml" value="0.15555555555555556" />
+        <entry key="app/src/main/res/drawable/scoreitems.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/drawable/start.xml" value="0.3441025641025641" />
+        <entry key="app/src/main/res/drawable/stroke_correct_greeen.xml" value="0.3441025641025641" />
+        <entry key="app/src/main/res/drawable/stroke_wrong_red.xml" value="0.3441025641025641" />
+        <entry key="app/src/main/res/drawable/tst.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/drawable/white_stroke.xml" value="0.1935185185185185" />
+        <entry key="app/src/main/res/layout/activity_game.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_high_score.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_levels.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_victory.xml" value="0.5909510618651893" />
+        <entry key="app/src/main/res/layout/activity_walkthrough.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/intro_one.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/intro_three.xml" value="0.3283514492753623" />
+        <entry key="app/src/main/res/layout/intro_two.xml" value="0.3283514492753623" />
+        <entry key="app/src/main/res/layout/items.xml" value="0.5770862800565771" />
+        <entry key="app/src/main/res/layout/score_items.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop/CIS/doc test" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
+    <option name="OTHER_OPTIONS" value="javadoc -encoding utf-8" />
+    <option name="OPTION_INCLUDE_LIBS" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

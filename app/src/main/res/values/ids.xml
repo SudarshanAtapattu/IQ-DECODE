@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="winnerName" type="id" />
+    <item name="won" type="id" />
+    <item name="getLevel" type="id" />
+    <item name="correctAnswer" type="id" />
+    <item name="incorrectAnswer" type="id" />
+    <item name="startNewGame" type="id" />
+</resources>

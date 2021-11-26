@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2c3748"
+    android:orientation="vertical"
+    tools:context=".Game">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#7995fd">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/back_bbtn" />
+
+        <TextView
+            android:id="@+id/selectedTopicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Newbie"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="1dp"
+                android:src="@drawable/timer_img" />
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:text="04:00"
+                android:textColor="#ffffff" />
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/questions"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:background="@drawable/round_back_white_10"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="1/10"
+        android:textColor="#7995fd"
+
+        android:textStyle="bold" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:elevation="50dp"
+        app:cardBackgroundColor="#34435B"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question3"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/clue1"
+                android:layout_width="178dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="One number is Correct well placed"
+                android:textColor="#ffffff"
+                android:textSize="9.5dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/question4"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question5"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question6"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/clue2"
+                android:layout_width="178dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="Nothing is correct"
+                android:textColor="#ffffff"
+                android:textSize="9.5dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
+
+            <TextView
+                android:id="@+id/question7"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question8"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question9"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/clue3"
+                android:layout_width="178dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="Two numbers are correct but wrong places "
+                android:textColor="#ffffff"
+                android:textSize="9.5dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp">
+
+            <TextView
+                android:id="@+id/question10"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question11"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question12"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/clue4"
+                android:layout_width="178dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="One number is correct but wrong placed"
+                android:textColor="#ffffff"
+                android:textSize="9.5dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp">
+
+            <TextView
+                android:id="@+id/question13"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question14"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question15"
+                android:layout_width="0dp"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#D2D9F4"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/clue5"
+                android:layout_width="178dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="0.20"
+                android:gravity="center"
+                android:text="One number is correct but wrong placed"
+                android:textColor="#ffffff"
+                android:textSize="9.5dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="150dp"
+        app:cardBackgroundColor="#34435B"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option1"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white_10"
+                android:text="0         4          2"
+
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option2"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white_10"
+                android:text="8         7          2"
+
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option3"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-340dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white_10"
+
+                android:text="6         0          4"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option4"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white_10"
+                android:text="3         0          8"
+
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/nextBtn"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonnew"
+        android:letterSpacing="0.02"
+        android:text=" Decode Next"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:backgroundTint="#7995fd" />
+
+
+
+
+
+
+</LinearLayout>

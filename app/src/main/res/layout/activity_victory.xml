@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2c3748"
+    android:orientation="vertical"
+    tools:context=".Victory">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="616dp"
+        app:cardBackgroundColor="#2c3748"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/winnerName"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="170dp"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="ccccc"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/headerName1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginRight="00dp"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="Hey"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#434D5D" />
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="146dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="200dp"
+            android:background="@drawable/round_bback_white"
+            android:elevation="5dp"
+            android:padding="20dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2c3748" />
+
+            <ImageView
+                android:id="@+id/winLogo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true" />
+
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="300dp"
+            app:cardBackgroundColor="#3A4556"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="115dp"
+                    android:layout_height="181dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#3cc77a"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/trophywin" />
+
+
+                    <TextView
+                        android:id="@+id/correctAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="8"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="50dp"
+                        android:gravity="center"
+                        android:text="Win"
+                        android:textColor="#ffffff"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="115dp"
+                    android:layout_height="181dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#E65A6F"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="50dp"
+                        android:gravity="center"
+                        android:text="Lose"
+                        android:textColor="#ffffff"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/stairs" />
+
+                    <TextView
+                        android:id="@+id/incorrectAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="8"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="115dp"
+                    android:layout_height="181dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#2196F3"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="50dp"
+                        android:gravity="center"
+                        android:text="Time"
+                        android:textColor="#ffffff"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/timer_img" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="8"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startNewGame"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="530dp"
+            android:background="@drawable/buttonnew"
+            android:letterSpacing="0.02"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:backgroundTint="#7995fd" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="240dp"
+            android:elevation="50dp"
+            app:cardBackgroundColor="#7995fd"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:id="@+id/getLevel"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
+                android:letterSpacing="0.02"
+                android:text="Level - NEWBIE"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/won"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="-29dp"
+                android:gravity="center"
+                android:letterSpacing="0.02"
+                android:text="Level - NEWBIE"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

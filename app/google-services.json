@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "798380297553",
+    "project_id": "iq---codes",
+    "storage_bucket": "iq---codes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798380297553:android:59614fac9edd0b87a21770",
+        "android_client_info": {
+          "package_name": "com.newapp.iq_codes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798380297553-ud9iolsu4tovmvqi2ms3b5picjuj5b5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmdpwfqpDp24NCTLdYe7TcVqMl8L0r2yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798380297553-ud9iolsu4tovmvqi2ms3b5picjuj5b5a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
