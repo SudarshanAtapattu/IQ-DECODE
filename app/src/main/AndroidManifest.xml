@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.newapp.iq_codes">
-   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,7 +16,7 @@
             android:name=".walkthrough"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:exported="true" />
         <activity
             android:name=".Victory"
@@ -31,7 +31,7 @@
             android:name=".Levels"
             android:exported="true" />
         <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

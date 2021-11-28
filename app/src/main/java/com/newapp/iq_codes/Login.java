@@ -163,6 +163,9 @@ public class Login extends AppCompatActivity {
                 });
     }
     private  void IP_Load(){
+        /***
+         *     wifi IP address and set  to the text
+         */
         ipShow = (TextView) findViewById(R.id.tvIP);
         WifiManager wifiManager = (WifiManager)getApplicationContext().getSystemService(WIFI_SERVICE);
         ipShow.setText("Player IP Address "+Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress()));
