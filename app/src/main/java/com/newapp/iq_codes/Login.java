@@ -84,10 +84,9 @@ public class Login extends AppCompatActivity {
 
      //[START configure_signIn]
     /***
-     *  Request only the user's ID token, which can be used to identify the
-     *  securely to IQ-DECODE backend. This will contain the user's basic
-     *  profile (name, profile picture URL, etc) so  should not need to
-     *  make an additional call to personalize  application.
+     * Configure sign-in to request the user's ID, email address, and basic
+     *  profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+     *  (GoogleSignInOption object for requesting user details! )
      */
     private void createRequest() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -96,7 +95,7 @@ public class Login extends AppCompatActivity {
                 .build();
         // [END configure_signIn]
         /***
-         *Build GoogleAPIClient with the Google Sign-In API and the above options.
+         * Build a GoogleSignInClient with the options specified by gso
          */
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
@@ -107,7 +106,8 @@ public class Login extends AppCompatActivity {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
         /***
-         *method sign in
+         * method for app to show popup, so user can select his account and approve app request to
+         * player account details.
          */
     }
 
@@ -156,7 +156,7 @@ public class Login extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), Levels.class);
                             startActivity(intent);
                         } else {
-                            Toast.makeText(Login.this, "sorry No internet connection", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Google sign in  failed", Toast.LENGTH_SHORT).show();
 
                         }
                     }
