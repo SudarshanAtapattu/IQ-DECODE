@@ -24,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-/***
+/**
  * Login
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
         createRequest();
 
         findViewById(R.id.google_sign).setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  onclick sign to google account
              */
             @Override
@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
-            /***
+            /**
              * if user there is already user inside the firebase user....
              */
             Intent intent = new Intent(getApplicationContext(), Levels.class);
@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
 
 
      //[START configure_signIn]
-    /***
+    /**
      * Configure sign-in to request the user's ID, email address, and basic
      *  profile. ID and basic profile are included in DEFAULT_SIGN_IN.
      *  (GoogleSignInOption object for requesting user details! )
@@ -94,7 +94,7 @@ public class Login extends AppCompatActivity {
                 .requestEmail()
                 .build();
         // [END configure_signIn]
-        /***
+        /**
          * Build a GoogleSignInClient with the options specified by gso
          */
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -105,7 +105,7 @@ public class Login extends AppCompatActivity {
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
-        /***
+        /**
          * method for app to show popup, so user can select his account and approve app request to
          * player account details.
          */
@@ -114,13 +114,13 @@ public class Login extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        /***
+        /**
          *    Check which request  responding to
          */
         if (requestCode == RC_SIGN_IN) {
 
             //[START get_id_token]
-            /***
+            /**
              *
              *  This task is always completed immediately, there is no need to attach an
              *  asynchronous listener.
@@ -142,7 +142,7 @@ public class Login extends AppCompatActivity {
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
-                /***
+                /**
                  *   Auth check  &  get selected account and  go to  levels intent
                  */
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -163,7 +163,7 @@ public class Login extends AppCompatActivity {
                 });
     }
     private  void IP_Load(){
-        /***
+        /**
          *     wifi IP address and set  to the text
          */
         ipShow = (TextView) findViewById(R.id.tvIP);

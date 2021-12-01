@@ -46,7 +46,7 @@ public class Levels extends AppCompatActivity {
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
         if (signInAccount != null) {
 
-            /***
+            /**
              *   user Name Fetch from the selected google account
              */
             name.setText("Hi   " + signInAccount.getDisplayName() + " !");
@@ -54,7 +54,7 @@ public class Levels extends AppCompatActivity {
 
 
         highScore.setOnClickListener((view) -> {
-            /***
+            /**
              *  Go to score layOut(UI)
              */
             startActivity(new Intent(Levels.this, HighScore.class));
@@ -75,14 +75,14 @@ public class Levels extends AppCompatActivity {
 
         logout.setOnClickListener(new View.OnClickListener() {
 
-            /***
+            /**
              *  SignOut profile
              */
             @Override
             public void onClick(View v) {
                 mGoogleSignInClient.signOut();
                 mAuth.signOut();
-                /***
+                /**
                  *   when click logout image  go to logout ui
                  */
                 Intent mainIntent = new Intent(Levels.this, Login.class);
@@ -92,7 +92,7 @@ public class Levels extends AppCompatActivity {
             }
         });
 
-        /***
+        /**
          *  layOut casting
          */
         final LinearLayout NEWBIELayout = findViewById(R.id.NEWBIELayout);
@@ -106,24 +106,24 @@ public class Levels extends AppCompatActivity {
         final Button startLevelBtn = findViewById(R.id.startLevelBtn);
 
         NEWBIELayout.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  NEWBIE Layout level selected ,layout  edge turns blue color others normal
              */
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  *   assign with selected topic name
                  */
                 selectedTopicName = "NEWBIE";
 
-                /***
+                /**
                  *   selected layout
                  */
                 NEWBIELayout.setBackgroundResource(R.drawable.round_back_white_stroke11);
 
 
 
-                /***
+                /**
                  *   deselected layout
                  */
                 ADVENTURERLayout.setBackgroundResource(R.drawable.round_back_white_10);
@@ -137,23 +137,23 @@ public class Levels extends AppCompatActivity {
 
 
         ADVENTURERLayout.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  ADVENTURER Layout ClickEvent ,layout  edge turns blue color others normal
              */
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  *   assign with selected topic name
                  */
                 selectedTopicName = "ADVENTURER";
 
-                /***
+                /**
                  *   selected layout
                  */
                 ADVENTURERLayout.setBackgroundResource(R.drawable.round_back_white_stroke11);
 
 
-                /***
+                /**
                  *   deselected layout
                  */
                 NEWBIELayout.setBackgroundResource(R.drawable.round_back_white_10);
@@ -166,23 +166,23 @@ public class Levels extends AppCompatActivity {
 
 
         EXPLORERLayout.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              * EXPLORER Layout ClickEvent ,layout  edge turns blue color others normal
              */
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  *   assign with selected topic name
                  */
                 selectedTopicName = "EXPLORER";
 
-                /***
+                /**
                  *   selected layout
                  */
                 EXPLORERLayout.setBackgroundResource(R.drawable.round_back_white_stroke11);
 
 
-                /***
+                /**
                  *   deselected layout
                  */
                 NEWBIELayout.setBackgroundResource(R.drawable.round_back_white_10);
@@ -194,23 +194,23 @@ public class Levels extends AppCompatActivity {
         });
 
         SUPERSTARLayout.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  SUPERSTAR Layout ClickEvent ,layout  edge turns blue color others normal
              */
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  *   assign with selected topic name
                  */
                 selectedTopicName = "SUPERSTAR";
 
-                /***
+                /**
                  *   selected laout
                  */
                 SUPERSTARLayout.setBackgroundResource(R.drawable.round_back_white_stroke11);
 
 
-                /***
+                /**
                  *   deSelected layout
                  */
                 NEWBIELayout.setBackgroundResource(R.drawable.round_back_white_10);
@@ -222,22 +222,22 @@ public class Levels extends AppCompatActivity {
         });
 
         CRUNKEDLayout.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  CRUNKED Layout ClickEvent ,layout  edge turns blue color others normal
              */
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  *   assign with selected topic name
                  */
                 selectedTopicName = "CRUNKED";
 
-                /***
+                /**
                  *   selected layout
                  */
                 CRUNKEDLayout.setBackgroundResource(R.drawable.round_back_white_stroke11);
 
-                /***
+                /**
                  *   deselected layout
                  */
                 NEWBIELayout.setBackgroundResource(R.drawable.round_back_white_10);
@@ -251,22 +251,22 @@ public class Levels extends AppCompatActivity {
 
 
         SUPERUSERLayout.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  SUPERUSER Layout ClickEvent  ,layout  edge turns blue color others normal
              */
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  *   assign with selected topic name
                  */
                 selectedTopicName = "SUPERUSER";
 
-                /***
+                /**
                  *   selected layout
                  */
                 SUPERUSERLayout.setBackgroundResource(R.drawable.round_back_white_stroke11);
 
-                /***
+                /**
                  *   deselected layout
                  */
                 NEWBIELayout.setBackgroundResource(R.drawable.round_back_white_10);
@@ -285,12 +285,12 @@ public class Levels extends AppCompatActivity {
                 if (selectedTopicName.isEmpty()) {
                     Toast.makeText(Levels.this, "Please Select Level", Toast.LENGTH_SHORT).show();
                 } else {
-                    /***
+                    /**
                      *  create an object of intent  to open quiz question screen
                      */
                     Intent intent = new Intent(Levels.this, Game.class);
 
-                    /***
+                    /**
                      *  put user entered  name and selected  topic nam to intent for use in next activity
                      */
                     intent.putExtra("selectedLevel", selectedTopicName);

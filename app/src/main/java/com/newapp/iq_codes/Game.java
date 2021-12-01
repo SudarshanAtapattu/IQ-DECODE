@@ -402,8 +402,8 @@ public class Game extends AppCompatActivity {
             question14.setText(questionLists.get(currentQuestionPosition).getQuestion14());
             question15.setText(questionLists.get(currentQuestionPosition).getQuestion15());
 
-            /***
-             * set values clue
+            /**
+             set values clue
              */
             clue1.setText(questionLists.get(currentQuestionPosition).getClue1());
             clue2.setText(questionLists.get(currentQuestionPosition).getClue2());

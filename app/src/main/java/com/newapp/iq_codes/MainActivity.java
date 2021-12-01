@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/***
+/**
  * The Main Activity is Splash screen
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    /***
+                    /**
                      * after splash screen go to  walkThrough intent
                      */
                     startActivity( new Intent(MainActivity.this,walkthrough.class)); // jump to next intent

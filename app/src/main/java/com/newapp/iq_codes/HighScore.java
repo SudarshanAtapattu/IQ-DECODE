@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-/***
+/**
  * Score
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -46,7 +46,7 @@ public class HighScore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /***
+                /**
                  *  when back button click go to Level
                  */
                 startActivity(new Intent(HighScore.this, Levels.class));
@@ -65,7 +65,7 @@ public class HighScore extends AppCompatActivity {
 
         dbRefer.addValueEventListener(new ValueEventListener() {
 
-            /***
+            /**
              *  get values form the fire base
              */
             @Override

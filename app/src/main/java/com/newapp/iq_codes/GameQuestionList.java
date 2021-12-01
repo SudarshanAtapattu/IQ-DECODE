@@ -1,5 +1,5 @@
 package com.newapp.iq_codes;
-/***
+/**
  * GameQuestionList
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417

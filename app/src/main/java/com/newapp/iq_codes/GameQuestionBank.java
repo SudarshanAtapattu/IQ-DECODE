@@ -2,7 +2,7 @@ package com.newapp.iq_codes;
 
 import java.util.ArrayList;
 import java.util.List;
-/***
+/**
  * GameQuestionBank
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -11,7 +11,7 @@ public class GameQuestionBank {
 
 
     private static List<GameQuestionList> NewbieQuestion() {
-        /***
+        /**
          *  NewbieQuestion
          */
         final List<GameQuestionList> questionLists = new ArrayList<>();
@@ -41,7 +41,7 @@ public class GameQuestionBank {
                 "7","8","0","One number is correct but in wrong place",
                 "0      0      8","0      5      2","0      4      2","0      8      4","0      5      2","");
 
-        /***
+        /**
          *  add question to the game
          */
         questionLists.add(question1);
@@ -52,7 +52,7 @@ public class GameQuestionBank {
     }
 
     private static List<GameQuestionList> AdventurerQuestion() {
-        /***
+        /**
          *  AdventurerQuestion
          */
         final List<GameQuestionList> questionLists = new ArrayList<>();
@@ -90,7 +90,7 @@ public class GameQuestionBank {
                 "5","7","4","Two numbers are correct but only well placed",
                 "8      7      0","7      1      4","5      8      2","2      8      5","2      8      5","");
 
-        /***
+        /**
          *  add question to the game
          */
         questionLists.add(question1);
@@ -102,7 +102,7 @@ public class GameQuestionBank {
     }
 
     private static List<GameQuestionList> ExplorerQuestion() {
-        /***
+        /**
          *  ExplorerQuestion
          */
         final List<GameQuestionList> questionLists = new ArrayList<>();
@@ -165,7 +165,7 @@ public class GameQuestionBank {
                 "5      2      8","3      1      4","6      2      2","5      7      8","5      2      8","");
 
 
-        /***
+        /**
          *  add question to the game
          */
         questionLists.add(question1);
@@ -180,7 +180,7 @@ public class GameQuestionBank {
     }
 
     private static List<GameQuestionList> SuperstarQuestion() {
-        /***
+        /**
          *  SuperstarQuestion
          */
         final List<GameQuestionList> questionLists = new ArrayList<>();
@@ -254,7 +254,7 @@ public class GameQuestionBank {
 
 
 
-        /***
+        /**
          *  add question to the game
          */
 
@@ -272,7 +272,7 @@ public class GameQuestionBank {
     }
 
     private static List<GameQuestionList> CrunckedQuestion() {
-        /***
+        /**
          *  CrunckedQuestion
          */
         final List<GameQuestionList> questionLists = new ArrayList<>();
@@ -338,7 +338,7 @@ public class GameQuestionBank {
                 "1      5      8","8      5      1","5      6      8","1      7      6","1      5      8","");
 
 
-        /***
+        /**
          *  add question to the game
          */
         questionLists.add(question1);
@@ -355,7 +355,7 @@ public class GameQuestionBank {
     }
 
     private static List<GameQuestionList> SuperuserQuestion() {
-        /***
+        /**
          *  SuperuserQuestion
          */
         final List<GameQuestionList> questionLists = new ArrayList<>();
@@ -402,7 +402,7 @@ public class GameQuestionBank {
                 "3      3      4","3      1      4","4      6      7","5      0      2","3      1      4","");
 
 
-        /***
+        /**
          *  add question to the game
          */
         questionLists.add(question1);
@@ -413,7 +413,7 @@ public class GameQuestionBank {
 
         return questionLists;
     }
-    /***
+    /**
      *  use switch case  for show questions
      */
     public static List<GameQuestionList> getQuestions(String selectedTopicName) {

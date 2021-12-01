@@ -29,4 +29,5 @@ public class IntroPref {
     public  boolean isFirsTimeLaunch(){
         return  preferences.getBoolean(IS_FIRST_TIME_LAUNCH,true);
     }
+
 }

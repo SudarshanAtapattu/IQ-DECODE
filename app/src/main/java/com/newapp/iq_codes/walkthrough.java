@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-/***
+/**
  * WalkThrough
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -37,7 +37,7 @@ public class walkthrough extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         layoutDots = findViewById(R.id.layoutDots);
 
-        /***
+        /**
          * pageViewer start oder
          */
         layouts = new int[]{
@@ -47,7 +47,7 @@ public class walkthrough extends AppCompatActivity {
 
 
         };
-        /***
+        /**
          * click next -> next PageViewer start
          */
         nextTxt.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +68,7 @@ public class walkthrough extends AppCompatActivity {
 
 
     }
-    /***
+    /**
      *  first show next on button,last page show start
      */
     ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
@@ -76,7 +76,7 @@ public class walkthrough extends AppCompatActivity {
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
         }
-        /***
+        /**
          *  current page display  "NEXT "   , Last page display "START"
          */
         @Override
@@ -127,14 +127,14 @@ public class walkthrough extends AppCompatActivity {
             container.removeView(view);
         }
     }
-    /***
+    /**
      *  smoothly transform
      */
     private int getItem(int i) {
         return viewPager.getCurrentItem() + 1;
     }
 
-    /***
+    /**
      *  start next activity login page
      */
     private void launchHomeScreen() {

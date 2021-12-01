@@ -15,7 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-/***
+/**
  * Victory
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -44,7 +44,7 @@ public class Victory extends AppCompatActivity {
         final String selectedTopicName = Game.getText;
 
 
-        /***
+        /**
          *  get values form the game correct question ,incorrect question and time
          */
         final int getCorrectAnswer = getIntent().getIntExtra("correct", 0);
@@ -52,7 +52,7 @@ public class Victory extends AppCompatActivity {
         final String getTime = getIntent().getStringExtra("time");
 
 
-        /***
+        /**
          *  set values form the game correct question ,incorrect question and time to the victory UI
          */
         correctAnswer.setText(String.valueOf(getCorrectAnswer));
@@ -60,7 +60,7 @@ public class Victory extends AppCompatActivity {
         getLevel.setText(String.valueOf(selectedTopicName));
         tvTime.setText(String.valueOf(getTime));
 
-        /***
+        /**
          *  get Reference from the firebase  Score
          */
         highScore = FirebaseDatabase.getInstance().getReference().child("Score");
@@ -68,7 +68,7 @@ public class Victory extends AppCompatActivity {
         startNewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  *   showing  correct question ,incorrect question and time to the victory UI return to the level for get new level
                  */
                 startActivity(new Intent(Victory.this, Levels.class)); //   back to level
@@ -79,20 +79,20 @@ public class Victory extends AppCompatActivity {
 
 
         if (getIncorrectAnswer > 1) {
-            /***
+            /**
              *   player get  getIncorrectAnswer > 1  display  "You Lose ! Try again ! "
              */
             won.setText("You Lose ! Try again ! ");
             winLogo.setBackgroundResource(R.drawable.lost_thropy);
         } else {
-            /***
+            /**
              *   Congrats You win !!
              */
             won.setText("Congrats You win !!");
             winLogo.setBackgroundResource(R.drawable.thropycup);
         }
 
-        /***
+        /**
          *   Player name  fetch  from the google SignIn account
          */
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
@@ -103,7 +103,7 @@ public class Victory extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        /***
+        /**
          *   Player press back  go to levels
          */
         startActivity(new Intent(Victory.this, Levels.class)); // back to level
@@ -112,7 +112,7 @@ public class Victory extends AppCompatActivity {
 
 
     private void insertLevelData() {
-        /***
+        /**
          *   insert data to the fireBase
          */
         String level = getLevel.getText().toString();

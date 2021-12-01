@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-/***
+/**
  * FetchAdapter class for set values to recyclerViw
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -23,7 +23,7 @@ public class FetchAdapter extends RecyclerView.Adapter<FetchAdapter.FetchViewHol
     ArrayList <Level_Model> list;
 
     public FetchAdapter(Context context, ArrayList<Level_Model> list) {
-        /***
+        /**
          *   fetching data from the Level_Model class
          */
         this.context = context;
@@ -35,13 +35,13 @@ public class FetchAdapter extends RecyclerView.Adapter<FetchAdapter.FetchViewHol
     public FetchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view  = LayoutInflater.from(context).inflate(R.layout.items,parent,false);
         return  new  FetchViewHolder(view);
-        /***
+        /**
          *  creating  view holder  for  set values
          */
     }
 
     public void onBindViewHolder(@NonNull FetchViewHolder holder, int position) {
-        /***
+        /**
          *   binding values to casting text views
          */
          Level_Model level_model = list.get(position);
@@ -59,9 +59,10 @@ public class FetchAdapter extends RecyclerView.Adapter<FetchAdapter.FetchViewHol
     }
 
     public static  class FetchViewHolder extends  RecyclerView.ViewHolder{
-        /***
+        /**
          *   casting values
          */
+
         TextView level,correct,incorrect,name,time;
 
         public FetchViewHolder(@NonNull View itemView) {
