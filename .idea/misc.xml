@@ -36,8 +36,7 @@
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop/CIS/doc test" />
     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
-    <option name="OTHER_OPTIONS" value="javadoc -encoding utf-8" />
-    <option name="OPTION_INCLUDE_LIBS" value="true" />
+    <option name="LOCALE" value="en" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

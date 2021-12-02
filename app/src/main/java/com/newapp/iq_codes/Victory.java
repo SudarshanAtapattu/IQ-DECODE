@@ -1,6 +1,6 @@
 package com.newapp.iq_codes;
 
-import android.annotation.SuppressLint;
+//import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +25,7 @@ public class Victory extends AppCompatActivity {
     ImageView winLogo;
     DatabaseReference highScore;
 
-    @SuppressLint("ResourceType")
+   // @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

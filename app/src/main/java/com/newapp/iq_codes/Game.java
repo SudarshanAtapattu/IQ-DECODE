@@ -1,5 +1,6 @@
 package com.newapp.iq_codes;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-/***
+/**
  * Game
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
@@ -36,7 +37,6 @@ public class Game extends AppCompatActivity {
     //time
     private static final long START_TIME_IN_MILLIS = 240000; //starting time 240000 -> 4 Minutes
     private CountDownTimer mCountDownTimer;
-    private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
     TextView timer;
 
@@ -55,12 +55,12 @@ public class Game extends AppCompatActivity {
 
         timer = findViewById(R.id.timer);
 
-        /***
+        /**
          * cast  timer TextView
          */
         questions = findViewById(R.id.questions);
 
-        /***
+        /**
          * cast  clue TextView
          */
         clue1 = findViewById(R.id.clue1);
@@ -69,7 +69,7 @@ public class Game extends AppCompatActivity {
         clue4 = findViewById(R.id.clue4);
         clue5 = findViewById(R.id.clue5);
 
-        /***
+        /**
          * cast  question TextView
          */
         question1 = findViewById(R.id.question1);
@@ -88,7 +88,7 @@ public class Game extends AppCompatActivity {
         question14 = findViewById(R.id.question14);
         question15 = findViewById(R.id.question15);
 
-        /***
+        /**
          *  cast option Button
          */
         option1 = findViewById(R.id.option1);
@@ -98,19 +98,19 @@ public class Game extends AppCompatActivity {
 
         nextBtn = findViewById(R.id.nextBtn);
 
-        /***
+        /**
          *  get topicSelectedTopic name from  Level Activity via Intent
          */
         final String getSelectedTopicName = getIntent().getStringExtra("selectedLevel");
         getText = getSelectedTopicName;
 
-        /***
+        /**
          * set name to topic name
          */
         selectedTopicName.setText(getSelectedTopicName);
 
         startTime(); // game timer
-        /***
+        /**
          * set current question to text view along with option from array list
          */
         questionLists = GameQuestionBank.getQuestions(getSelectedTopicName);
@@ -150,25 +150,25 @@ public class Game extends AppCompatActivity {
 
 
         option1.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  check if player has not  attempted this question yet yet
              */
             @Override
             public void onClick(View v) {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option1.getText().toString();
-                    /***
+                    /**
                      * change selected AppCompatButton background color and text color
                      */
                     option1.setBackgroundResource(R.drawable.stroke_wrong_red);
                     option1.setTextColor(Color.WHITE);
 
-                    /***
+                    /**
                      * revelAnswer answer
                      */
                     revelAnswer();
 
-                    /***
+                    /**
                      * assign player answer values to userSelectedOption in GameQuestionList class
                      */
                     questionLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
@@ -177,25 +177,25 @@ public class Game extends AppCompatActivity {
         });
 
         option2.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  check if player has not  attempted this question yet
              */
             @Override
             public void onClick(View v) {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option2.getText().toString();
-                    /***
+                    /**
                      * change selected AppCompatButton background color and text color
                      */
                     option2.setBackgroundResource(R.drawable.stroke_wrong_red);
                     option2.setTextColor(Color.WHITE);
 
-                    /***
+                    /**
                      * revelAnswer answer
                      */
                     revelAnswer();
 
-                    /***
+                    /**
                      * assign player answer values to userSelectedOption in GameQuestionList class
                      */
                     questionLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
@@ -205,25 +205,25 @@ public class Game extends AppCompatActivity {
         });
 
         option3.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  check if player has not  attempted this question yet
              */
             @Override
             public void onClick(View v) {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option3.getText().toString();
-                    /***
+                    /**
                      * change selected AppCompatButton background color and text color
                      */
 
                     option3.setBackgroundResource(R.drawable.stroke_wrong_red);
                     option3.setTextColor(Color.WHITE);
-                    /***
+                    /**
                      * revelAnswer answer
                      */
                     revelAnswer();
 
-                    /***
+                    /**
                      * assign player answer values to userSelectedOption in GameQuestionList class
                      */
                     questionLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
@@ -233,24 +233,24 @@ public class Game extends AppCompatActivity {
         });
 
         option4.setOnClickListener(new View.OnClickListener() {
-            /***
+            /**
              *  check if player has not  attempted this question yet
              */
             @Override
             public void onClick(View v) {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option4.getText().toString();
-                    /***
+                    /**
                      * change selected AppCompatButton background color and text color
                      */
                     option4.setBackgroundResource(R.drawable.stroke_wrong_red);
                     option4.setTextColor(Color.WHITE);
-                    /***
+                    /**
                      * revelAnswer answer
                      */
                     revelAnswer();
 
-                    /***
+                    /**
                      * assign player answer values to userSelectedOption in GameQuestionList class
                      */
                     questionLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
@@ -260,7 +260,7 @@ public class Game extends AppCompatActivity {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  * check if user has not selected any option yet
                  */
                 if (selectedOptionByUser.isEmpty()) {
@@ -276,7 +276,7 @@ public class Game extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /***
+                /**
                  * back button to  go to levels 7 stop time
                  */
                 stopTime();
@@ -290,12 +290,12 @@ public class Game extends AppCompatActivity {
 
     private void startTime() {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
-            /***
+            /**
              * count down interval 1000 = 1Second
              */
             @Override
             public void onTick(long millisUntilFinished) {
-                /***
+                /**
                  * timer count down start 04:00 -> 00:00
                  * player has 4 mints to complete the level
                  */
@@ -306,7 +306,7 @@ public class Game extends AppCompatActivity {
             @Override
             public void onFinish() {
 
-                /***
+                /**
                  * timer cancel &  00 : 00
                  */
                 mCountDownTimer.cancel();
@@ -319,7 +319,7 @@ public class Game extends AppCompatActivity {
 
 
     private void stopTime() {
-        /***
+        /**
          *  stop timer
          */
         mCountDownTimer.cancel();
@@ -329,18 +329,16 @@ public class Game extends AppCompatActivity {
         int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
 
-        /***
+        /**
          *  set timer as 00 : 00 format
          */
         String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
         timer.setText(timeLeftFormatted);
 
         if (seconds == 00 && minutes == 00) {  // 1 second game ->
-            /***
+            /**
              * if timer value get 00:00 game over and  correct answer,incorrect answer and  put
              * for the Victory Intent
-             *
-             *
              */
 
             Toast.makeText(Game.this, "Time is over", Toast.LENGTH_SHORT).show();
@@ -354,20 +352,21 @@ public class Game extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void changeNextQuestion() {
-        /***
+        /**
          * change question
          */
         currentQuestionPosition++;
         if ((currentQuestionPosition + 1) == questionLists.size()) {
-            /***
+            /**
              *   final question change name submit code
              */
             nextBtn.setText("Submit Code");
         }
         if (currentQuestionPosition < questionLists.size()) {
             selectedOptionByUser = "";
-            /***
+            /**
              * set background text  #1F6888 and  background  round_back_white_10
              */
             option1.setBackgroundResource(R.drawable.round_back_white_10);
@@ -382,7 +381,7 @@ public class Game extends AppCompatActivity {
             option4.setBackgroundResource(R.drawable.round_back_white_10);
             option4.setTextColor(Color.parseColor("#1F6888"));
 
-            /***
+            /**
              * set current question to textView along  with  options from  GameQuestionLists ArrayList
              */
             questions.setText((currentQuestionPosition + 1) + "/" + questionLists.size());
@@ -411,7 +410,7 @@ public class Game extends AppCompatActivity {
             clue4.setText(questionLists.get(currentQuestionPosition).getClue4());
             clue5.setText(questionLists.get(currentQuestionPosition).getClue5());
 
-            /***
+            /**
              * set values answers
              */
             option1.setText(questionLists.get(currentQuestionPosition).getOption1());
@@ -421,7 +420,7 @@ public class Game extends AppCompatActivity {
 
 
         } else {
-            /***
+            /**
              *  pass values to the victory(incorrect ,correct, time)
              */
             Intent intent = new Intent(Game.this, Victory.class);
@@ -437,7 +436,7 @@ public class Game extends AppCompatActivity {
     }
 
     private int getCorrectAnswer() {
-        /***
+        /**
          *  calculate correct answer from the questionList
          */
         int correctAnswer = 0;
@@ -453,7 +452,7 @@ public class Game extends AppCompatActivity {
     }
 
     private int getInCorrectAnswer() {
-        /***
+        /**
          *  calculate incorrect answer from the questionList
          */
         int correctAnswer = 0;
@@ -472,7 +471,7 @@ public class Game extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        /***
+        /**
          * when back press  stop time and go to Levels
          */
         stopTime();
@@ -481,7 +480,7 @@ public class Game extends AppCompatActivity {
     }
 
     private void revelAnswer() {
-        /***
+        /**
          * set correct answers  green colors and  texts  are white color
          */
         final String getAnswer = questionLists.get(currentQuestionPosition).getAnswer();
