@@ -29,7 +29,7 @@ public class Levels extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
-    private final static int RC_SIGN_IN = 123;
+    //private final static int RC_SIGN_IN = 123;
 
 
     @Override

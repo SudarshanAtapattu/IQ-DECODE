@@ -67,7 +67,6 @@ public class Login extends AppCompatActivity {
 
     }
 
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -81,11 +80,9 @@ public class Login extends AppCompatActivity {
         }
     }
 
-
      //[START configure_signIn]
     /**
-     * Configure sign-in to request the user's ID, email address, and basic
-     *  profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+     *  Configure Google Sign-in and the GoogleSignInClient object
      *  (GoogleSignInOption object for requesting user details! )
      */
     private void createRequest() {
@@ -101,7 +98,6 @@ public class Login extends AppCompatActivity {
 
     }
 
-
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -115,15 +111,15 @@ public class Login extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         /**
-         *    Check which request  responding to
+         *   Result returned from launching the Intent from GoogleSignInClient.getSignInIntent
          */
         if (requestCode == RC_SIGN_IN) {
 
             //[START get_id_token]
             /**
              *
-             *  This task is always completed immediately, there is no need to attach an
-             *  asynchronous listener.
+             *  The Task returned from this call is always completed, no need to attach
+             *  listener.
              */
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
@@ -137,7 +133,6 @@ public class Login extends AppCompatActivity {
         }
 
     }
-
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
@@ -162,6 +157,7 @@ public class Login extends AppCompatActivity {
                     }
                 });
     }
+
     private  void IP_Load(){
         /**
          *     wifi IP address and set  to the text

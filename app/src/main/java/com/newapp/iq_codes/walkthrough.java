@@ -32,7 +32,7 @@ public class walkthrough extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_walkthrough);
 
-        introPref = new IntroPref(this);
+        //introPref = new IntroPref(this);
         nextTxt = findViewById(R.id.nextTxt);
         viewPager = findViewById(R.id.viewPager);
         layoutDots = findViewById(R.id.layoutDots);
@@ -138,7 +138,7 @@ public class walkthrough extends AppCompatActivity {
      *  start next activity login page
      */
     private void launchHomeScreen() {
-        introPref.setIsFirstTimeLaunch(false);
+       // introPref.setIsFirstTimeLaunch(false);
         startActivity(new Intent(walkthrough.this, Login.class));
     }
 }
