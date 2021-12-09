@@ -1,9 +1,8 @@
 package com.newapp.iq_codes;
 
 import android.content.Intent;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.text.format.Formatter;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,16 +23,20 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
 /**
  * Login
  * @author Pradepa Sudarshana Atapattu
  * Student RegNo.2115417
- * @apiNote using  google Authentication for google API via the firebase
+ * @apiNote Firebase Authentication using a Google ID Token.
  */
 public class Login extends AppCompatActivity {
 
     private GoogleSignInClient mGoogleSignInClient;
-
 
     private final static int RC_SIGN_IN = 123;
     /**
@@ -82,7 +85,7 @@ public class Login extends AppCompatActivity {
 
      //[START configure_signIn]
     /**
-     *  Configure Google Sign-in and the GoogleSignInClient object
+     *  configure the GoogleSignInOptions object, call requestIdToken
      *  (GoogleSignInOption object for requesting user details! )
      */
     private void createRequest() {
@@ -90,6 +93,9 @@ public class Login extends AppCompatActivity {
                 .requestIdToken(getString(R.string.default_web_client_id_new))
                 .requestEmail()
                 .build();
+
+
+
         // [END configure_signIn]
         /**
          * Build a GoogleSignInClient with the options specified by gso
@@ -163,8 +169,27 @@ public class Login extends AppCompatActivity {
          *     wifi IP address and set  to the text
          */
         ipShow = (TextView) findViewById(R.id.tvIP);
-        WifiManager wifiManager = (WifiManager)getApplicationContext().getSystemService(WIFI_SERVICE);
-        ipShow.setText("Player IP Address "+Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress()));
+        //WifiManager wifiManager = (WifiManager)getApplicationContext().getSystemService(WIFI_SERVICE);
+        //ipShow.setText("Player IP Address "+Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress()));
+
+        try {
+            StrictMode.ThreadPolicy policy  = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            URL url = new URL("https://checkip.amazonaws.com/");
+            URLConnection urlConnection = url.openConnection();
+            urlConnection.setConnectTimeout(1000);
+            urlConnection.setReadTimeout(1000);
+
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+            ipShow.setText("Player IP Address "+bufferedReader.readLine());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
     }
+
+
+
 
 }

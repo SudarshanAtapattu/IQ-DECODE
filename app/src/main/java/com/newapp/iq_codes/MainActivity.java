@@ -3,7 +3,6 @@ package com.newapp.iq_codes;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
  * Student RegNo.2115417
  */
 public class MainActivity extends AppCompatActivity {
-    private Button startGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    /**
-                     * after splash screen go to  walkThrough intent
-                     */
+                    // after splash screen go to  walkThrough intent
+
                     startActivity( new Intent(MainActivity.this,walkthrough.class)); // jump to next intent
                 }
             }

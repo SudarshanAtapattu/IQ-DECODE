@@ -22,28 +22,28 @@ public class FetchAdapter extends RecyclerView.Adapter<FetchAdapter.FetchViewHol
     Context context;
     ArrayList <Level_Model> list;
 
+    /**
+     *   fetching data from the Level_Model class
+     */
     public FetchAdapter(Context context, ArrayList<Level_Model> list) {
-        /**
-         *   fetching data from the Level_Model class
-         */
+
         this.context = context;
         this.list = list;
     }
 
+    /**
+     *  creating  view holder  for  set values
+     */
     @NonNull
     @Override
     public FetchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view  = LayoutInflater.from(context).inflate(R.layout.items,parent,false);
         return  new  FetchViewHolder(view);
-        /**
-         *  creating  view holder  for  set values
-         */
+
     }
 
     public void onBindViewHolder(@NonNull FetchViewHolder holder, int position) {
-        /**
-         *   binding values to casting text views
-         */
+         //binding values to casting text views
          Level_Model level_model = list.get(position);
          holder.level.setText(level_model.getLevel());
          holder.correct.setText(level_model.getCorrect());
@@ -59,10 +59,6 @@ public class FetchAdapter extends RecyclerView.Adapter<FetchAdapter.FetchViewHol
     }
 
     public static  class FetchViewHolder extends  RecyclerView.ViewHolder{
-        /**
-         *   casting values
-         */
-
         TextView level,correct,incorrect,name,time;
 
         public FetchViewHolder(@NonNull View itemView) {
